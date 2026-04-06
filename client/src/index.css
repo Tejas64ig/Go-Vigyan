@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-heavy {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-medium {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  
+  .focus-glow-saffron {
+    @apply focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron transition-all duration-300;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0A0015;
+  color: rgba(255, 255, 255, 0.90);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Star field generator */
+.star-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: star-pulse 3s ease-in-out infinite;
+}
