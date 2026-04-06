@@ -48,7 +48,7 @@ const KPICard = ({ title, value, subtitle, icon: Icon, color, sparklineTrend }) 
         <div className="flex justify-between items-start">
           <div className="flex flex-col">
             <span className="font-orbitron text-4xl md:text-5xl font-bold text-white drop-shadow-md">
-              <CountUp end={value || 0} duration={2} separator="," preserveValue={true} />
+              {value || 0}
             </span>
             <span className="font-inter text-sm md:text-base text-white mt-1">{title}</span>
             <span className="font-inter text-xs text-white/50">{subtitle}</span>
