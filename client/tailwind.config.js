@@ -7,6 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        cream: "#F5F0E8",
+        forest: "#2D6A4F",
+        amber: "#B5651D",
+        charcoal: "#2C2C2C",
         saffron: "#FF8C00",
         'sacred-green': "#00C853",
         'alert-amber': "#FFD600",
@@ -14,9 +18,10 @@ export default {
         'deep-void': "#0A0015",
       },
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
-        exo2: ['"Exo 2"', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+        lora: ['Lora', 'serif'],
         inter: ['Inter', 'sans-serif'],
+        dmsans: ['"DM Sans"', 'sans-serif'],
         devanagari: ['"Tiro Devanagari Hindi"', 'serif'],
       },
       animation: {
